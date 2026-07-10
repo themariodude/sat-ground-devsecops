@@ -2,11 +2,11 @@
 
 A realistic satellite ground-system API demonstrating a complete DevSecOps workflow: backend development, CI/CD pipelines, automated testing, Docker containerization, security scanning, and Kubernetes deployment readiness.
 
-Built to connect DevSecOps practices with a satellite ground-system context — the same domain as Boeing Defense, Space & Security's Ground Software Engineering team.
+Built to connect DevSecOps practices with a satellite ground-system context. The same domain as Boeing Defense, Space & Security's Ground Software Engineering team.
 
 ## Why This Project
 
-Satellite ground systems require the highest levels of software reliability, security, and deployment discipline. This project demonstrates how modern DevSecOps practices — automated testing, static analysis, dependency scanning, container security, and infrastructure-as-code — apply to a mission-critical context where failure is not an option.
+Satellite ground systems require the highest levels of software reliability, security, and deployment discipline. This project demonstrates how modern DevSecOps practices, automated testing, static analysis, dependency scanning, container security, and infrastructure-as-code, apply to a mission critical context where failure is not an option.
 
 ## Architecture
 
