@@ -2,11 +2,11 @@
 
 A realistic satellite ground-system API demonstrating a complete DevSecOps workflow: backend development, CI/CD pipelines, automated testing, Docker containerization, security scanning, and Kubernetes deployment readiness.
 
-Built to connect DevSecOps practices with a satellite ground-system context — the same domain as Boeing Defense, Space & Security's Ground Software Engineering team.
+Built to connect DevSecOps practices with a satellite ground-system context. The same domain as Boeing Defense, Space & Security's Ground Software Engineering team.
 
 ## Why This Project
 
-Satellite ground systems require the highest levels of software reliability, security, and deployment discipline. This project demonstrates how modern DevSecOps practices — automated testing, static analysis, dependency scanning, container security, and infrastructure-as-code — apply to a mission-critical context where failure is not an option.
+Satellite ground systems require the highest levels of software reliability, security, and deployment discipline. This project demonstrates how modern DevSecOps practices, automated testing, static analysis, dependency scanning, container security, and infrastructure-as-code, apply to a mission critical context where failure is not an option.
 
 ## Architecture
 
@@ -186,20 +186,4 @@ Includes:
 - Implement role-based access control (RBAC) for API endpoints
 - Add integration tests that run against the Docker container in CI
 
-## Interview Talking Points
-
-> "I built this project to connect DevSecOps practices with a satellite ground-system context. The application uses public satellite orbital data from CelesTrak, calculates real satellite positions using SGP4 propagation, and exposes operational-style API endpoints — health checks, position lookups, and satellite status monitoring."
-
-> "The CI/CD pipeline runs 10 stages: automated tests, linting, static security analysis with Bandit, dependency vulnerability scanning with pip-audit, Docker build, container scanning with Trivy, and a smoke test. Every push is validated before it can merge."
-
-> "On the security side, the container runs as non-root, configuration is environment-variable based with no hardcoded secrets, all inputs are validated through Pydantic, and three separate scanning tools check for vulnerabilities at the code, dependency, and container levels."
-
-> "The Kubernetes manifests include health probes, resource limits, and a non-root security context — the same patterns you'd use for deploying to a real classified environment."
-
-> "The application also has resilience built in — if the live CelesTrak data source is unavailable, it falls back to local TLE data so the system stays operational. That kind of graceful degradation is critical for ground systems that can't afford downtime."
-
----
-
-**Author:** Philip Ma  
-**Built for:** Boeing DevSecOps Software Engineer interview preparation  
 **License:** MIT
