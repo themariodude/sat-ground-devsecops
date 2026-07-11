@@ -36,7 +36,7 @@ def _parse_tle_text(raw: str) -> Dict[str, Tuple[str, str]]:
     parsed: Dict[str, Tuple[str, str]] = {}
     i = 0
     while i + 2 < len(lines):
-        name_line = lines[i]
+        _ = lines[i]
         line1 = lines[i + 1]
         line2 = lines[i + 2]
         if line1.startswith("1 ") and line2.startswith("2 "):

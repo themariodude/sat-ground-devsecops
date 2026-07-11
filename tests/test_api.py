@@ -1,5 +1,5 @@
 """Tests for Satellite Ground Tracker API."""
-import pytest
+import pytest  # noqa: F401
 from unittest.mock import patch
 from fastapi.testclient import TestClient
 
