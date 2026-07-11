@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sat-ground-tracker
+  labels:
+    app: sat-ground-tracker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sat-ground-tracker
+  template:
+    metadata:
+      labels:
+        app: sat-ground-tracker
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+      containers:
+        - name: sat-ground-tracker
+          image: sat-ground-tracker:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: sat-tracker-config
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
